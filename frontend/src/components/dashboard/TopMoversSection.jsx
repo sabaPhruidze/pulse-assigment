@@ -1,6 +1,6 @@
 import { formatCurrency, formatPercent, getChangeColor } from '../../utils/format'
 import Card from '../ui/Card'
-
+import ErrorState from '../ui/ErrorState'
 const MoversList = ({ items }) => {
   return (
     <div className="divide-y divide-gray-100">

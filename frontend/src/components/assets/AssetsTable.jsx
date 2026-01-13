@@ -1,7 +1,7 @@
 import Card from '../ui/Card'
 import SortHeader from './SortHeader'
 import AssetRow from './AssetRow'
-
+import ErrorState from '../ui/ErrorState'
 const Skeleton = () => (
   <div className="animate-pulse space-y-3">
     {Array.from({ length: 8 }).map((_, i) => (

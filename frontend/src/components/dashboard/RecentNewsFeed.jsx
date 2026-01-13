@@ -1,7 +1,7 @@
 import { formatDateTime } from '../../utils/format'
 import Card from '../ui/Card'
 import Badge from '../ui/Badge'
-
+import ErrorState from '../ui/ErrorState'
 const NewsSkeleton = () => (
   <div className="animate-pulse space-y-3">
     {Array.from({ length: 5 }).map((_, i) => (
