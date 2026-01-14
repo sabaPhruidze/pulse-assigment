@@ -6,7 +6,7 @@ import ErrorState from '../ui/ErrorState'
 const Skeleton = () => (
   <div className="animate-pulse space-y-3">
     {Array.from({ length: 8 }).map((_, i) => (
-      <div key={i} className="h-10 bg-gray-100 rounded" />
+     <div key={i} className="h-10 bg-gray-100 dark:bg-slate-800/60 rounded" />
     ))}
   </div>
 )
@@ -21,7 +21,7 @@ const AssetsTable = ({ assets, loading, error, sortField, sortOrder, onSort, onR
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
-            <thead className="text-left text-gray-500 border-b border-gray-200">
+            <thead className="text-left text-gray-500 dark:text-slate-400 border-b border-gray-200 dark:border-slate-800">
               <tr>
                 <th className="py-3 pr-4">
                   <SortHeader label="Symbol" active={sortField === 'symbol'} order={sortOrder} onClick={() => onSort('symbol')} />
@@ -39,15 +39,15 @@ const AssetsTable = ({ assets, loading, error, sortField, sortOrder, onSort, onR
               </tr>
             </thead>
 
-            <tbody className="divide-y divide-gray-100">
+           <tbody className="divide-y divide-gray-100 dark:divide-slate-800">
               {assets.map((a) => (
                 <AssetRow key={`${a.assetType}-${a.id}`} asset={a} onClick={onRowClick} />
               ))}
             </tbody>
           </table>
 
-          {!assets.length && <div className="text-center text-gray-500 py-10">No assets found.</div>}
-          <div className="mt-3 text-xs text-gray-500">Mobile hides some columns. Tap a row for details.</div>
+          {!assets.length && <div className="text-center text-gray-500 dark:text-slate-400 py-10">No assets found.</div>}
+          <div className="mt-3 text-xs text-gray-500 dark:text-slate-400">Mobile hides some columns. Tap a row for details.</div>
         </div>
       )}
     </Card>

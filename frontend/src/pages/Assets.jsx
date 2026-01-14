@@ -47,8 +47,8 @@ const Assets = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-2">Assets</h1>
-      <p className="text-gray-600 mb-6">Unified view of stocks and cryptocurrencies.</p>
+      <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-slate-100">Assets</h1>
+      <p className="text-gray-600 dark:text-slate-400 mb-6">Unified view of stocks and cryptocurrencies.</p>
 
       <AssetsToolbar
         filters={FILTERS}
