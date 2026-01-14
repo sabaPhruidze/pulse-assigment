@@ -73,8 +73,8 @@ These features will demonstrate advanced skills but are not required:
 
 - ✅ Use Recharts library to add a simple chart (e.g., portfolio value over time)
 - ✅ Implement basic state management with Context API
-- ✅ Add smooth transitions/animations
 - ✅ Dark mode toggle
+- ✅ Add smooth transitions/animations
 - ✅ Real-time data updates (polling every 30 seconds)
 
 ## Technical Requirements

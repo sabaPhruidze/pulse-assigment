@@ -18,15 +18,15 @@ const Layout = ({ children }) => {
   ]
 
   return (
-   <div className="min-h-screen bg-gray-50 select-none sm:select-text">
+   <div className="min-h-screen bg-gray-50 text-gray-900 select-none sm:select-text dark:bg-slate-950 dark:text-slate-100">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-200">
+     <header className="bg-white shadow-sm border-b border-gray-200 dark:bg-slate-900 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
            <div className="flex items-center">
             <button
               type="button"
-              className="md:hidden inline-flex items-center justify-center rounded-lg border border-gray-200 px-3 py-2 mr-3"
+              className="md:hidden inline-flex items-center justify-center rounded-lg border border-gray-200 px-3 py-2 mr-3 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800"
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
             >
@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
             </button>
 
             <h1 className="text-xl sm:text-2xl font-bold text-pulse-primary">Pulse</h1>
-            <span className="ml-2 text-sm text-gray-500 hidden sm:inline">Market Monitoring Engine</span>
+            <span className="ml-2 text-sm text-gray-500 dark:text-slate-400 hidden sm:inline">Market Monitoring Engine</span>
           </div>
           <div className='flex gap-3'>
              <ThemeToggle />
@@ -56,20 +56,15 @@ const Layout = ({ children }) => {
         )}
        <aside
           className={`
-            fixed inset-y-0 left-0 z-40 bg-white border-r border-gray-200
-            transform transition-transform duration-300
-            ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}
-            md:static md:translate-x-0
-            ${sidebarOpen ? 'md:w-64' : 'md:w-16'}
-            w-64
-            min-h-[calc(100vh-4rem)]
-            `}>
-              <div className="md:hidden flex items-center justify-between px-4 py-3 border-b border-gray-100">
-            <span className="font-semibold text-gray-800">Menu</span>
+            fixed inset-y-0 left-0 z-40 bg-white border-r border-gray-200 dark:bg-slate-900 dark:border-slate-800 transform transition-transform duration-300
+            ${mobileOpen ? 'translate-x-0' : '-translate-x-full'} md:static md:translate-x-0 ${sidebarOpen ? 'md:w-64' : 'md:w-16'}
+            w-64 min-h-[calc(100vh-4rem)]`}>
+             <div className="md:hidden flex items-center justify-between px-4 py-3 border-b border-gray-100 dark:border-slate-800">
+           <span className="font-semibold text-gray-800 dark:text-slate-200">Menu</span>
 
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-lg border border-gray-200 px-3 py-2"
+              className="inline-flex items-center justify-center rounded-lg border border-gray-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800"
               onClick={() => setMobileOpen(false)}
               aria-label="Close menu"
             >
@@ -90,7 +85,7 @@ const Layout = ({ children }) => {
                       className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                         isActive
                           ? 'bg-pulse-primary text-white'
-                          : 'text-gray-700 hover:bg-gray-100'
+                          : 'text-gray-700 hover:bg-gray-100 dark:text-slate-200 dark:hover:bg-slate-800'
                       }`}
                     >
                       <span className="text-xl">{item.icon}</span>
