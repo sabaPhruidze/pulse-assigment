@@ -3,7 +3,7 @@ import Card from '../ui/Card'
 import ErrorState from '../ui/ErrorState'
 const MoversList = ({ items }) => {
   return (
-    <div className="divide-y divide-gray-100">
+    <div className="divide-y divide-gray-100 dark:divide-slate-800">
       {(items || []).slice(0, 3).map((a) => (
           <div
             key={a.id}
@@ -11,10 +11,10 @@ const MoversList = ({ items }) => {
           >
           <div className="min-w-0">
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-gray-900">{a.symbol}</span>
-              <span className="text-sm text-gray-500 truncate">{a.name}</span>
+             <span className="font-semibold text-gray-900 dark:text-slate-100">{a.symbol}</span>
+             <span className="text-sm text-gray-500 dark:text-slate-400 truncate">{a.name}</span>
             </div>
-            <div className="text-xs text-gray-500 mt-1">{formatCurrency(a.currentPrice)}</div>
+           <div className="text-xs text-gray-500 dark:text-slate-400 mt-1">{formatCurrency(a.currentPrice)}</div>
           </div>
 
           <div className={`font-semibold ${getChangeColor(a.changePercent)} text-right sm:text-left`}>
@@ -29,7 +29,7 @@ const MoversList = ({ items }) => {
 const MoversSkeleton = () => (
   <div className="animate-pulse space-y-3">
     {Array.from({ length: 3 }).map((_, i) => (
-      <div key={i} className="h-12 bg-gray-100 rounded" />
+      <div key={i} className="h-12 bg-gray-100 dark:bg-slate-800/60 rounded" />
     ))}
   </div>
 )
