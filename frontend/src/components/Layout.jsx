@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import MetaMaskButton from './MetaMaskButton'
-
+import ThemeToggle from './ui/ThemeToggle'
+import { useUI } from '../context/UIContext'
 const Layout = ({ children }) => {
   const location = useLocation()
  const [sidebarOpen, setSidebarOpen] = useState(true)      // desktop collapse
@@ -37,9 +38,10 @@ const Layout = ({ children }) => {
             <h1 className="text-xl sm:text-2xl font-bold text-pulse-primary">Pulse</h1>
             <span className="ml-2 text-sm text-gray-500 hidden sm:inline">Market Monitoring Engine</span>
           </div>
+          <div className='flex gap-3'>
+             <ThemeToggle />
             <MetaMaskButton />
-        
-
+          </div>
           </div>
         </div>
       </header>
