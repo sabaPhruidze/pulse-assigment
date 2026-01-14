@@ -6,7 +6,7 @@ const NewsToolbar = ({ category, onCategory }) => {
       <select
         value={category}
         onChange={(e) => onCategory(e.target.value)}
-        className="rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white"
+        className="select-text rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white"
       >
         <option value="all">All</option>
         <option value="macro">Macro</option>

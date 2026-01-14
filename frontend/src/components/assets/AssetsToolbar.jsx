@@ -25,7 +25,7 @@ const AssetsToolbar = ({ filters, activeFilter, onFilter, search, onSearch }) =>
           value={search}
           onChange={(e) => onSearch(e.target.value)}
           placeholder="Search by symbol or name…"
-          className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-gray-900/20"
+          className="select-text w-full rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-gray-900/20"
         />
       </div>
     </div>
