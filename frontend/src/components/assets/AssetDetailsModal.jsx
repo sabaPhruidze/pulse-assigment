@@ -19,8 +19,8 @@ const AssetDetailsModal = ({ asset, onClose }) => {
   if (!asset) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onMouseDown={onClose}>
-      <div className="w-full max-w-lg rounded-lg bg-white shadow border border-gray-100 p-6" onMouseDown={(e) => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-2 sm:p-4" onMouseDown={onClose}>
+      <div className="w-full max-w-lg rounded-lg bg-white shadow-lg border border-gray-100 p-4 sm:p-6 max-h-[85vh] overflow-y-auto" onMouseDown={(e) => e.stopPropagation()}>
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="text-sm text-gray-500">Asset Details</div>

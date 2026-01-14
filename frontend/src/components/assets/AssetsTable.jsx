@@ -2,6 +2,7 @@ import Card from '../ui/Card'
 import SortHeader from './SortHeader'
 import AssetRow from './AssetRow'
 import ErrorState from '../ui/ErrorState'
+
 const Skeleton = () => (
   <div className="animate-pulse space-y-3">
     {Array.from({ length: 8 }).map((_, i) => (
@@ -25,7 +26,7 @@ const AssetsTable = ({ assets, loading, error, sortField, sortOrder, onSort, onR
                 <th className="py-3 pr-4">
                   <SortHeader label="Symbol" active={sortField === 'symbol'} order={sortOrder} onClick={() => onSort('symbol')} />
                 </th>
-                <th className="py-3 pr-4">Name</th>
+                <th className="py-3 pr-4 hidden sm:table-cell">Name</th>
                 <th className="py-3 pr-4 hidden sm:table-cell">
                   <SortHeader label="Price" active={sortField === 'currentPrice'} order={sortOrder} onClick={() => onSort('currentPrice')} />
                 </th>

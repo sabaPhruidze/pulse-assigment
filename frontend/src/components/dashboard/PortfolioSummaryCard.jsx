@@ -33,7 +33,7 @@ const PortfolioSummaryCard = () => {
                 </div>
               </div>
 
-              <div className="text-right">
+             <div className="text-left sm:text-right">
                 <div className="text-sm text-gray-500">Total Change</div>
                 <div className={`text-xl font-semibold ${changeColor}`}>
                   {formatCurrency(portfolio?.totalChange)} ({formatPercent(portfolio?.totalChangePercent)})

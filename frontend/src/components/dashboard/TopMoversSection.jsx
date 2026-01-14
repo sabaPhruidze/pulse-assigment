@@ -5,7 +5,10 @@ const MoversList = ({ items }) => {
   return (
     <div className="divide-y divide-gray-100">
       {(items || []).slice(0, 3).map((a) => (
-        <div key={a.id} className="py-3 first:pt-0 last:pb-0 flex justify-between gap-4">
+          <div
+            key={a.id}
+            className="py-3 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-4"
+          >
           <div className="min-w-0">
             <div className="flex items-center gap-2">
               <span className="font-semibold text-gray-900">{a.symbol}</span>
@@ -14,7 +17,7 @@ const MoversList = ({ items }) => {
             <div className="text-xs text-gray-500 mt-1">{formatCurrency(a.currentPrice)}</div>
           </div>
 
-          <div className={`font-semibold ${getChangeColor(a.changePercent)}`}>
+          <div className={`font-semibold ${getChangeColor(a.changePercent)} text-right sm:text-left`}>
             {formatPercent(a.changePercent)}
           </div>
         </div>

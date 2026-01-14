@@ -12,7 +12,7 @@ const FilterButton = ({ active, children, onClick }) => {
 const AssetsToolbar = ({ filters, activeFilter, onFilter, search, onSearch }) => {
   return (
     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 overflow-x-auto pb-1">
         {filters.map((f) => (
           <FilterButton key={f.value} active={activeFilter === f.value} onClick={() => onFilter(f.value)}>
             {f.label}
