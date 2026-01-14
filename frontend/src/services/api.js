@@ -1,12 +1,13 @@
 import axios from "axios";
 
-const API_BASE_URL = "/api";
+// Vercel/production: set VITE_API_BASE_URL to your backend URL (with /api)
+// Local fallback: http://localhost:5000/api
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
-  headers: {
-    "Content-Type": "application/json",
-  },
+  headers: { "Content-Type": "application/json" },
 });
 
 export const getStocks = () => api.get("/stocks");
@@ -23,4 +24,5 @@ export const getPortfolio = () => api.get("/portfolio");
 export const getInsights = (params) => api.get("/insights", { params });
 export const getDashboard = () => api.get("/dashboard");
 export const getPortfolioPerformance = () => api.get("/portfolio/performance");
+
 export default api;
