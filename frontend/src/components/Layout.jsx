@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import MetaMaskButton from './MetaMaskButton'
 import ThemeToggle from './ui/ThemeToggle'
-import { useUI } from '../context/UIContext'
 const Layout = ({ children }) => {
   const location = useLocation()
  const [sidebarOpen, setSidebarOpen] = useState(true)      // desktop collapse

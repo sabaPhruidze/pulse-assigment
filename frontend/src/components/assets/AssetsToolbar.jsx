@@ -26,10 +26,15 @@ const AssetsToolbar = ({ filters, activeFilter, onFilter, search, onSearch }) =>
       </div>
 
       <div className="w-full md:w-72">
-        <input
+       <input
+          id="asset-search"
+          name="assetSearch"
+          type="search"
           value={search}
           onChange={(e) => onSearch(e.target.value)}
           placeholder="Search by symbol or name…"
+          autoComplete="off"
+          aria-label="Search assets by symbol or name"
           className="select-text w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-gray-900/20 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:ring-slate-200/20"
         />
       </div>
