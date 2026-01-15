@@ -9,8 +9,9 @@ const News = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-2">News</h1>
-      <p className="text-gray-600 mb-6">Market news with category filtering.</p>
+     <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-slate-100">News</h1>
+      <p className="text-gray-600 dark:text-slate-400 mb-6">Market news with category filtering.</p>
+
 
       <NewsToolbar category={category} onCategory={setCategory} />
       <NewsList items={data || []} loading={loading} error={error && 'Failed to load news.'} />

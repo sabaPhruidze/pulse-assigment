@@ -1,12 +1,11 @@
 const NewsToolbar = ({ category, onCategory }) => {
   return (
     <div className="flex items-center justify-between gap-4 mb-4">
-      <div className="text-sm text-gray-600">Filter by category</div>
-
+     <div className="text-sm text-gray-600 dark:text-slate-400">Filter by category</div>
       <select
         value={category}
         onChange={(e) => onCategory(e.target.value)}
-        className="select-text rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white"
+       className="select-text rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
       >
         <option value="all">All</option>
         <option value="macro">Macro</option>
