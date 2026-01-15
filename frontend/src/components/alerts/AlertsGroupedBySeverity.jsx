@@ -7,7 +7,7 @@ import ErrorState from '../ui/ErrorState'
 const Skeleton = () => (
   <div className="animate-pulse space-y-3">
     {Array.from({ length: 6 }).map((_, i) => (
-      <div key={i} className="h-12 bg-gray-100 rounded" />
+      <div key={i} className="h-12 bg-gray-100 dark:bg-slate-800/60 rounded" />
     ))}
   </div>
 )
@@ -30,7 +30,7 @@ const AlertsGroupedBySeverity = ({ items, loading, error }) => {
   if (error) return <ErrorState message={error} />
 
   return (
-    <Card title="🚨 Alerts Center" right={!loading ? <span className="text-sm text-gray-500">Grouped by severity</span> : null}>
+    <Card title="🚨 Alerts Center" right={!loading ? <span className="text-sm text-gray-500 dark:text-slate-400">Grouped by severity</span> : null}>
       {loading ? (
         <Skeleton />
       ) : (
