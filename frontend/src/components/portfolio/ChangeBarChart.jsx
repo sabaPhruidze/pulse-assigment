@@ -1,5 +1,6 @@
 import Card from '../ui/Card'
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Cell } from 'recharts'
+import { useUI } from '../../context/UIContext'
 
 const COLORS = [
   '#2563eb', // blue
@@ -13,6 +14,7 @@ const ChangeBarChart = ({ assets, loading }) => {
     name: a.assetId,
     change: Number(a.changePercent || 0),
   }))
+  const { isDark } = useUI()
 
   return (
     <Card title="📊 Change % by Asset">
