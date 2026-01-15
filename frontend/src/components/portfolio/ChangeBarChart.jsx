@@ -28,10 +28,16 @@ const ChangeBarChart = ({ assets, loading }) => {
         ) : (
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip formatter={(v) => `${Number(v).toFixed(2)}%`} />
+             <CartesianGrid strokeDasharray="3 3" stroke="rgba(148, 163, 184, 0.25)" />
+              <XAxis dataKey="name" tick={{ fill: 'rgba(226, 232, 240, 0.8)' }} axisLine={{ stroke: 'rgba(148, 163, 184, 0.35)' }} tickLine={{ stroke: 'rgba(148, 163, 184, 0.35)' }} />
+              <YAxis tick={{ fill: 'rgba(226, 232, 240, 0.8)' }} axisLine={{ stroke: 'rgba(148, 163, 184, 0.35)' }} tickLine={{ stroke: 'rgba(148, 163, 184, 0.35)' }} />
+              <Tooltip
+                formatter={(v) => `${Number(v).toFixed(2)}%`}
+                contentStyle={{ backgroundColor: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(148,163,184,0.25)', borderRadius: 8 }}
+                labelStyle={{ color: 'rgba(226,232,240,0.9)' }}
+                itemStyle={{ color: 'rgba(226,232,240,0.9)' }}
+              />
+
 
               <Bar
                 dataKey="change"

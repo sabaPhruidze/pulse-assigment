@@ -14,7 +14,8 @@ const Portfolio = () => {
 
   if (error) {
     return (
-      <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-red-700">
+     <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-red-700
+                dark:border-red-900/40 dark:bg-red-950/40 dark:text-red-200">
         {error}
       </div>
     )
@@ -23,8 +24,8 @@ const Portfolio = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">Portfolio</h1>
-        <p className="text-gray-600">Detailed holdings + charts.</p>
+       <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-slate-100">Portfolio</h1>
+        <p className="text-gray-600 dark:text-slate-400">Detailed holdings + charts.</p>
       </div>
 
       <PortfolioHighlights portfolio={portfolio} performance={perf} loading={loading} />

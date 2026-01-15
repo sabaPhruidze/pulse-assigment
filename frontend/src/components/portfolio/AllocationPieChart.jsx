@@ -16,7 +16,7 @@ const AllocationPieChart = ({ allocation, loading }) => {
   return (
     <Card title="🧩 Allocation">
       {loading ? (
-        <div className="animate-pulse h-64 bg-gray-100 rounded" />
+       <div className="animate-pulse h-64 bg-gray-100 rounded" />
       ) : (
         <div className="h-64" onMouseDown={(e) => e.preventDefault()}>
           <ResponsiveContainer width="100%" height="100%">
@@ -40,7 +40,12 @@ const AllocationPieChart = ({ allocation, loading }) => {
                 ))}
               </Pie>
 
-              <Tooltip formatter={(v) => `${v}%`} />
+             <Tooltip
+              formatter={(v) => `${v}%`}
+              contentStyle={{ backgroundColor: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(148,163,184,0.25)', borderRadius: 8 }}
+              labelStyle={{ color: 'rgba(226,232,240,0.9)' }}
+              itemStyle={{ color: 'rgba(226,232,240,0.9)' }}
+            />
             </PieChart>
           </ResponsiveContainer>
         </div>
